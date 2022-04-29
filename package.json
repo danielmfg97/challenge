@@ -2,6 +2,9 @@
   "name": "challenge-frame",
   "version": "0.0.1",
   "description": "",
+  "compilerOptions": {
+    "esModuleInterop": true
+  },
   "author": "",
   "private": true,
   "license": "UNLICENSED",
