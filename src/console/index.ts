@@ -1,3 +1,3 @@
-import {consoleApplication} from './application/console-application'
+import {decomposeAndCheckForPrimeNumbers} from './application/console-application'
 
-export const handler = consoleApplication();
+export const handler = decomposeAndCheckForPrimeNumbers();
