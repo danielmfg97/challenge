@@ -4,15 +4,15 @@ import {checkPrime} from '../../utils/prime-numbers'
 export const decomposeAndCheckForPrimeNumbers = async (): Promise<void> => {
   const [parameter] = process.argv.slice(2)
 
-  const numeroASerDividido = Number(parameter);
+  const numbertoBeChecked = Number(parameter);
   
-  if (isNaN(numeroASerDividido) || numeroASerDividido <= 0) {
+  if (isNaN(numbertoBeChecked) || numbertoBeChecked <= 0) {
     console.error('Entrada inválida, gentileza fornecer um NÚMERO maior que 0');
     process.exit()
   }
   let primeNumbers: number[] = [];
 
-  const decomposed = await decomposeNumber(numeroASerDividido);
+  const decomposed = await decomposeNumber(numbertoBeChecked);
 
   for (const number of decomposed){
     const isPrime = await checkPrime(number)
@@ -23,5 +23,7 @@ export const decomposeAndCheckForPrimeNumbers = async (): Promise<void> => {
     }
   }
 
-  console.log(primeNumbers);
+  console.log(`Número de entrada: ${numbertoBeChecked}`);
+  console.log(`Números divisores: ${decomposed}`);
+  console.log(`Números primos: ${primeNumbers}`);
 }
