@@ -3,7 +3,7 @@ import { DecomposeNumberService } from './decompose-number.service';
 import { DecomposeNumberController } from './decompose-number.controller';
 
 @Module({
-  exports: [DecomposeNumberService],
+  controllers: [DecomposeNumberController],
   providers: [DecomposeNumberService]
 })
 export class DecomposeNumberModule {}
