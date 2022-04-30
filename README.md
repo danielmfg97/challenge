@@ -99,6 +99,8 @@ IMPORTANTE: Para utilizar é necessário a extensão  REST Client do VSCode
 
 4. Linter
 
+5. Melhorar o validator da rota
+
 ## Test
 
 ```bash

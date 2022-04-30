@@ -32,4 +32,26 @@ describe('DecomposeNumberController', () => {
       expect(await numberToCheckController.checkNumber(10)).toBe(result);
     });
   });
+
+  describe('checkNumber', () => {
+    it('should return an error if the provided param is not a number', async () => {
+      const result = {
+          "statusCode": 400,
+          "message": "Validation failed (numeric string is expected)",
+          "error": "Bad Request"
+        };
+      expect(await numberToCheckController.checkNumber(10)).toBe(result);
+    });
+  });
+
+  describe('checkNumber', () => {
+    const result = {
+      "statusCode": 400,
+      "message": "The param has to be greater than 0"
+    };
+    
+    it('should return a message if the param is 0 or lower', async () => {
+      expect(await numberToCheckController.checkNumber(0)).toBe(result);
+    });
+  });
 });
