@@ -8,10 +8,9 @@ export class NumberToCheckController {
 
   @Get(':numberToBeChecked')
   checkNumber(@Param('numberToBeChecked', ParseIntPipe) numberToBeChecked: number) {
-    if (isNaN(numberToBeChecked) || numberToBeChecked <= 0) {
-      console.error('Entrada inválida, gentileza fornecer um NÚMERO maior que 0');
-      process.exit()
+    if (numberToBeChecked <= 0) {
+      return('Entrada inválida, gentileza fornecer um NÚMERO maior que 0')
     }
-    return this.numberToCheckService.findOne(+numberToBeChecked);
+    return this.numberToCheckService.checkNumber(+numberToBeChecked);
   }
 }

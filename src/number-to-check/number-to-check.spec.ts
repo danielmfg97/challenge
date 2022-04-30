@@ -1,20 +1,35 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { DecomposeNumberController } from './number-to-check.controller';
-import { DecomposeNumberService } from './number-to-check.service';
+import { NumberToCheckController } from './number-to-check.controller';
+import { NumberToCheckService } from './number-to-check.service';
 
 describe('DecomposeNumberController', () => {
-  let controller: DecomposeNumberController;
+  let numberToCheckController: NumberToCheckController;
+  let numberToCheckService : NumberToCheckService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      controllers: [DecomposeNumberController],
-      providers: [DecomposeNumberService],
+      controllers: [NumberToCheckController],
+      providers: [NumberToCheckService],
     }).compile();
 
-    controller = module.get<DecomposeNumberController>(DecomposeNumberController);
+    numberToCheckController = module.get<NumberToCheckController>(NumberToCheckController);
+    numberToCheckService = module.get<NumberToCheckService>(NumberToCheckService);
   });
 
-  it('should be defined', () => {
-    expect(controller).toBeDefined();
+  describe('checkNumber', () => {
+    it('should return the decomposed number and the prime numbers if there is any', async () => {
+      const result = {
+        "decomposed": [
+          1,
+          2,
+          5,
+          10
+        ],
+        "primeNumbers": [
+          5
+        ]
+      };
+      expect(await numberToCheckController.checkNumber(10)).toBe(result);
+    });
   });
 });

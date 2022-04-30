@@ -4,7 +4,7 @@ import { checkPrime } from 'src/utils/prime-numbers';
 
 @Injectable()
 export class NumberToCheckService {
-  async findOne(id: number) {
+  async checkNumber(id: number) {
     const decomposed = await decomposeNumber(id);
 
     let primeNumbers: number[] = [];
