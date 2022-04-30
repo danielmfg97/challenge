@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { DecomposeNumberModule } from './decompose-number/decompose-number.module';
+import { DecomposeNumberModule } from './number-to-check/number-to-check.module';
 
 @Module({
   imports: [DecomposeNumberModule],

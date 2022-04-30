@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { DecomposeNumberController } from './decompose-number.controller';
-import { DecomposeNumberService } from './decompose-number.service';
+import { DecomposeNumberController } from './number-to-check.controller';
+import { DecomposeNumberService } from './number-to-check.service';
 
 describe('DecomposeNumberController', () => {
   let controller: DecomposeNumberController;

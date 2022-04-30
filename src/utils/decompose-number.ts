@@ -1,12 +1,12 @@
-export const decomposeNumber = async (numeroDecomposto: number): Promise<number[]> => {
-  let divisores: number[] = [];
+export const decomposeNumber = async (numberToBeDecomposed: number): Promise<number[]> => {
+  let dividers: number[] = [];
 
-  for(let i = 1; i < numeroDecomposto; i++){
-    if(numeroDecomposto % i == 0){
-      divisores.push(i)
+  for(let i = 1; i <= numberToBeDecomposed; i++){
+    if(numberToBeDecomposed % i == 0){
+      dividers.push(i)
     }
   }
 
-  return divisores;  
+  return dividers;  
 }
   

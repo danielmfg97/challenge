@@ -3,7 +3,7 @@ import { decomposeNumber } from '../utils/decompose-number'
 import { checkPrime } from 'src/utils/prime-numbers';
 
 @Injectable()
-export class DecomposeNumberService {
+export class NumberToCheckService {
   async findOne(id: number) {
     const decomposed = await decomposeNumber(id);
 
@@ -13,7 +13,6 @@ export class DecomposeNumberService {
       const isPrime = await checkPrime(number)     
   
       if (isPrime){
-        console.log('teste')
         primeNumbers.push(number)
       }
     }

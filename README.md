@@ -76,9 +76,28 @@ $ npm run start:prod
 #docker
 $ docker-compose up
 
+#Entrar no BASH após subir o container
+$ docker-compose exec app bash
+
 #console-application
 $ node ./src/console/index.ts <PARÂMETRO>
 ```
+
+## Rota
+
+1. A fim de facilitar e eliminar o postman nessa projeto, na raíz dele temos um arquivo api.http com a request já montada, basta clicar em 'send request'. 
+
+IMPORTANTE: Para utilizar é necessário a extensão  REST Client do VSCode
+
+## Melhorias
+
+1. Pode-se implementar o uso de um bando No-sql para que sejam salvos os números que já foram calculados.
+
+2. Incluir repositórios.
+
+3. Infelizmente não tive tempo de implementar os Testes de unidade por conta de uma viagem programada.
+
+4. Linter
 
 ## Test
 

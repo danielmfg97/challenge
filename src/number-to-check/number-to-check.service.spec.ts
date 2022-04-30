@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { DecomposeNumberService } from './decompose-number.service';
+import { NumberToCheckService } from './number-to-check.service';
 
 describe('DecomposeNumberService', () => {
-  let service: DecomposeNumberService;
+  let service: NumberToCheckService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [DecomposeNumberService],
+      providers: [NumberToCheckService],
     }).compile();
 
-    service = module.get<DecomposeNumberService>(DecomposeNumberService);
+    service = module.get<NumberToCheckService>(NumberToCheckService);
   });
 
   it('should be defined', () => {
